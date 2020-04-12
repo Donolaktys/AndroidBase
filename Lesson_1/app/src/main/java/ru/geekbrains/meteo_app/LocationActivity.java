@@ -13,15 +13,15 @@ public class LocationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
-        String[] city = {"Москва", "Воронеж", "Смоленск"};
-
+        /**
+         * Вывести список популярных городов
+         * для примера выводится как ListView с подготовленным списком
+         */
         ListView lvCity = (ListView) findViewById(R.id.lvCity);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+        String[] city = {"Москва", "Воронеж", "Смоленск"};
+        ArrayAdapter<String> sAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, city);
-
-        lvCity.setAdapter(adapter);
-
+        lvCity.setAdapter(sAdapter);
 
     }
 

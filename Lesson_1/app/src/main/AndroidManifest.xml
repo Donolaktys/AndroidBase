@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="ru.geekbrains.meteo_app.LocationActivity">
-        </activity>
+
+        <activity android:name="ru.geekbrains.meteo_app.LocationActivity"/>
+
+        <activity android:name="ru.geekbrains.meteo_app.SettingsActivity" />
     </application>
 
 </manifest>
