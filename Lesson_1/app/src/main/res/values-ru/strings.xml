@@ -7,4 +7,5 @@
     <string name="oneDay">1 день</string>
     <string name="threeDays">3 дня</string>
     <string name="week">неделя</string>
+    <string name="enterLocation">Введите местоположение</string>
 </resources>

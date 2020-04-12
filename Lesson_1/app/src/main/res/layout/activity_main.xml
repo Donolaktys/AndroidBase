@@ -14,12 +14,17 @@
         android:background="@color/backGr"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
             android:id="@+id/locality"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
+            android:background="@color/backGr"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="sans-serif"
             android:text="@string/locality"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/textColor"
             android:textSize="@dimen/locality" />
 
