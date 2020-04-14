@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson_1;
+package ru.geekbrains.meteo_app;
 
 import org.junit.Test;
 

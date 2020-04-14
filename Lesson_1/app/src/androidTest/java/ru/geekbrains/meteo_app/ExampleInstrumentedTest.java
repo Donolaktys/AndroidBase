@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson_1;
+package ru.geekbrains.meteo_app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("ru.geekbrains.lesson_1", appContext.getPackageName());
+        assertEquals("ru.geekbrains.meteo_app", appContext.getPackageName());
     }
 }
