@@ -14,16 +14,13 @@
         android:background="@color/backGr"
         android:orientation="horizontal">
 
-        <EditText
+        <TextView
             android:id="@+id/localityChoice"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:background="@color/backGr"
-            android:fontFamily="sans-serif"
             android:hint="@string/localityChoice"
-            android:textAlignment="viewStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/textColor"
             android:textSize="@dimen/locality" />
 
@@ -47,25 +44,11 @@
 
     </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="@color/backGr">
-
-        <TextView
-            android:id="@+id/infoText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="215dp"
-            android:layout_marginEnd="177dp"
-            android:layout_marginBottom="347dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </android.support.constraint.ConstraintLayout>
+        android:background="@color/backGr"/>
 
     <LinearLayout
         style="?android:attr/buttonBarStyle"
