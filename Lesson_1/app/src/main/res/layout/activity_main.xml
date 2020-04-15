@@ -14,14 +14,14 @@
         android:background="@color/backGr"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/localityBtn"
+        <EditText
+            android:id="@+id/localityChoice"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
             android:background="@color/backGr"
             android:fontFamily="sans-serif"
-            android:text="@string/locality"
+            android:hint="@string/localityChoice"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/textColor"

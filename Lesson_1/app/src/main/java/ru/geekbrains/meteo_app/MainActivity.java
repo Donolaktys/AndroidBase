@@ -4,12 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
-private Button localityBtn;
+private EditText localityChoice;
 private ImageButton settingsBtn;
 private TextView infoText;
 
@@ -17,7 +18,7 @@ private TextView infoText;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        localityBtn = findViewById(R.id.localityBtn);
+        localityChoice = findViewById(R.id.localityChoice);
         infoText = findViewById(R.id.infoText);
         settingsBtn = findViewById(R.id.settingsBtn);
         Button oneDayBtn  = findViewById(R.id.oneDayBtn);
@@ -27,7 +28,7 @@ private TextView infoText;
         //обработка нажатия кнопок на первом экране
             //
             // выбор местоположения, открытие экрана выбора
-        localityBtn.setOnClickListener(v -> {
+        localityChoice.setOnClickListener(v -> {
         Intent locationIntent = new Intent(MainActivity.this, LocationActivity.class);
 
         startActivity(locationIntent);
@@ -48,9 +49,9 @@ private TextView infoText;
 
             // нажатие на кнопку настроек, переход на экран настройки приложения
         settingsBtn.setOnClickListener(v -> {
-            Intent locationIntent = new Intent(MainActivity.this, SettingsActivity.class);
+            Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
 
-            startActivity(locationIntent);
+            startActivity(settingsIntent);
         });
     }
 
