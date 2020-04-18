@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    private static final String LIFECYCLE = "LIFE_CYCLE";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
