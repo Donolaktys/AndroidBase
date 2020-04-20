@@ -1,9 +1,12 @@
 package ru.geekbrains.meteo_app;
 
 import android.content.Intent;
+import android.icu.util.UniversalTimeScale;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -23,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements Constants{
         Button oneDayBtn  = findViewById(R.id.oneDayBtn);
         Button threeDaysBtn  = findViewById(R.id.threeDaysBtn);
         Button weekBtn  = findViewById(R.id.weekBtn);
+        TextView infoLink = findViewById(R.id.infoLink);
+        String link = getApplicationContext().getString(R.string.link);
 
         //обработка нажатия кнопок на первом экране
             //
@@ -30,6 +35,12 @@ public class MainActivity extends AppCompatActivity implements Constants{
         localityChoice.setOnClickListener(v -> {
         Intent locationIntent = new Intent(MainActivity.this, LocationActivity.class);
             startActivityForResult(locationIntent, 1);
+        });
+
+            //дополнительная информация
+        infoLink.setOnClickListener(v -> {
+            Intent info = new Intent(Intent.ACTION_VIEW, Uri.parse(link + localityChoice.getText()));
+            startActivity(info);
         });
 
             //обработка нажатия кнопок выбора вариантов отображения
