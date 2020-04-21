@@ -134,12 +134,14 @@ public class MainActivity extends AppCompatActivity implements Constants {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
+        outState.putString(LOCALITY_LABEL, localityChoice.getText().toString());
         MakeLog.lifeCycle(this, "MAIN Сохранение данных");
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        localityChoice.setText(savedInstanceState.getString(LOCALITY_LABEL));
         MakeLog.lifeCycle(this, "MAIN Восстановление данных");
     }
 
