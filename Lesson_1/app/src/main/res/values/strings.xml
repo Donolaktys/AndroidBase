@@ -13,4 +13,8 @@
     <string name="settingsBtnDescription">Settings</string>
     <string name="infoLink"><a>Additional Information</a></string>
     <string name="link">https://en.wikipedia.org/wiki/</string>
+
+    <string name="oneDay_blank_fragment">oneDay_blank_fragment</string>
+    <string name="threeDay_blank_fragment">threeDay_blank_fragment</string>
+    <string name="week_blank_fragment">week_blank_fragment</string>
 </resources>

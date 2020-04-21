@@ -3,4 +3,5 @@
     <dimen name="locality">45sp</dimen>
     <dimen name="temperature">80sp</dimen>
     <dimen name="measure">35sp</dimen>
+    <dimen name="fragment">50sp</dimen>
 </resources>

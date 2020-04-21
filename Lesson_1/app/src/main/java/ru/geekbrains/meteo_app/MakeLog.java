@@ -10,7 +10,6 @@ public final class MakeLog {
     private static final String ERROR = "ERROR";
 
     public static void click(Context context, String msg) {
-        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
         Log.d(CLICK, msg);
     }
 
