@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements Constants {
     private TextView localityChoice;
+    private TextView temperature;
+    private TextView measure;
     private OneDayFragment oneDayFragment;
     private ThreeDaysFragment threeDaysFragment;
     private WeekFragment weekFragment;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements Constants {
         MakeLog.lifeCycle(this, "MAIN Created");
 
         localityChoice = findViewById(R.id.localityChoice);
+        temperature = findViewById(R.id.temperature);
+        measure = findViewById(R.id.measure);
         ImageButton settingsBtn = findViewById(R.id.settingsBtn);
         Button oneDayBtn = findViewById(R.id.oneDayBtn);
         Button threeDaysBtn = findViewById(R.id.threeDaysBtn);
@@ -135,6 +139,8 @@ public class MainActivity extends AppCompatActivity implements Constants {
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString(LOCALITY_LABEL, localityChoice.getText().toString());
+        outState.putString(TEMPERATURE_LABEL, temperature.getText().toString());
+        outState.putString(MEASURE_LABEL, measure.getText().toString());
         MakeLog.lifeCycle(this, "MAIN Сохранение данных");
     }
 
@@ -142,6 +148,8 @@ public class MainActivity extends AppCompatActivity implements Constants {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         localityChoice.setText(savedInstanceState.getString(LOCALITY_LABEL));
+        temperature.setText(savedInstanceState.getString(TEMPERATURE_LABEL));
+        measure.setText(savedInstanceState.getString(MEASURE_LABEL));
         MakeLog.lifeCycle(this, "MAIN Восстановление данных");
     }
 
