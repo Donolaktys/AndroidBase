@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements Constants {
         threeDaysFragment = new ThreeDaysFragment();
         weekFragment = new WeekFragment();
 
+        measure.setText(MEASUREMENT_FAHRENHEIT);
         //обработка нажатия кнопок на первом экране
         //
         // выбор местоположения, открытие экрана выбора
