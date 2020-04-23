@@ -14,4 +14,8 @@
     <string name="settingsBtnDescription">Настройки</string>
     <string name="infoLink"><a>Дополнительная информация</a></string>
     <string name="link">https://ru.wikipedia.org/wiki/</string>
+
+    <string name="oneDay_blank_fragment">oneDay_blank_fragment</string>
+    <string name="threeDay_blank_fragment">threeDay_blank_fragment</string>
+    <string name="week_blank_fragment">week_blank_fragment</string>
 </resources>

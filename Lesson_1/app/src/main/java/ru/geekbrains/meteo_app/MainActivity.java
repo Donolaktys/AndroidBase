@@ -1,12 +1,12 @@
 package ru.geekbrains.meteo_app;
 
 import android.content.Intent;
-import android.icu.util.UniversalTimeScale;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements Constants {
     private TextView localityChoice;
+    private OneDayFragment oneDayFragment;
+    private ThreeDaysFragment threeDaysFragment;
+    private WeekFragment weekFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements Constants {
         Button weekBtn = findViewById(R.id.weekBtn);
         TextView infoLink = findViewById(R.id.infoLink);
         String link = getApplicationContext().getString(R.string.link);
+        oneDayFragment = new OneDayFragment();
+        threeDaysFragment = new ThreeDaysFragment();
+        weekFragment = new WeekFragment();
 
         //обработка нажатия кнопок на первом экране
         //
@@ -47,14 +53,17 @@ public class MainActivity extends AppCompatActivity implements Constants {
         //обработка нажатия кнопок выбора вариантов отображения
         oneDayBtn.setOnClickListener(v -> {
             MakeLog.click(this, "\"1 день\"");
+            replaceFragment(oneDayFragment);
         });
 
         threeDaysBtn.setOnClickListener(v -> {
             MakeLog.click(this, "\"3 дня\"");
+            replaceFragment(threeDaysFragment);
         });
 
         weekBtn.setOnClickListener(v -> {
             MakeLog.click(this, "\"неделя\"");
+            replaceFragment(weekFragment);
         });
 
         // нажатие на кнопку настроек, переход на экран настройки приложения
@@ -63,6 +72,12 @@ public class MainActivity extends AppCompatActivity implements Constants {
             Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(settingsIntent);
         });
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.mainFragmentView, fragment);
+        fragmentTransaction.commit();
     }
 
     @Override
