@@ -12,4 +12,6 @@
     <string name="cBoxPressure">Атмосферное давление</string>
     <string name="cBoxWindSpeed">Скорость ветра</string>
     <string name="settingsBtnDescription">Настройки</string>
+    <string name="infoLink"><a>Дополнительная информация</a></string>
+    <string name="link">https://ru.wikipedia.org/wiki/</string>
 </resources>

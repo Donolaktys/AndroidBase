@@ -11,4 +11,6 @@
     <string name="cBoxPressure">Atmosphere pressure</string>
     <string name="cBoxWindSpeed">Wind Speed</string>
     <string name="settingsBtnDescription">Settings</string>
+    <string name="infoLink"><a>Additional Information</a></string>
+    <string name="link">https://en.wikipedia.org/wiki/</string>
 </resources>
