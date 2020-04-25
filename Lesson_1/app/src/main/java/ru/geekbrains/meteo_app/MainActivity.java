@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity implements Constants {
         threeDaysFragment = new ThreeDaysFragment();
         weekFragment = new WeekFragment();
 
+        //единица измерения по умолчанию
         measure.setText(MEASUREMENT_FAHRENHEIT);
+
         //обработка нажатия кнопок на первом экране
         //
         // выбор местоположения, открытие экрана выбора
@@ -89,14 +91,13 @@ public class MainActivity extends AppCompatActivity implements Constants {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         MakeLog.lifeCycle(getApplicationContext(), "onActivityResult");
-        if (data == null) {
-            return;
-        }
-        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_CITY) {
-            String city = data.getStringExtra(CITY);
-            localityChoice.setText(city);
-        } else {
-            MakeLog.error(getApplicationContext(), "Wrong result");
+        if (data != null) {
+            if (requestCode == REQUEST_CODE_CITY) {
+                if (resultCode == RESULT_OK){
+                    String city = data.getStringExtra(CITY);
+                    localityChoice.setText(city);
+                }
+            }
         }
     }
 
